@@ -2,8 +2,6 @@ import CONFIG from "../config/site";
 import Section from "../components/ui/Section";
 import Card from "../components/ui/Card";
 import ButtonLink from "../components/ui/ButtonLink";
-import IconGithub from "../icons/IconGithub";
-import { FileText } from "lucide-react";
 
 export default function Contact() {
 	return (

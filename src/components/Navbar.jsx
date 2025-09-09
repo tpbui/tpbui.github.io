@@ -1,6 +1,4 @@
 import CONFIG from "../config/site";
-import Pill from "./ui/Pill";
-import { FileText } from "lucide-react";
 
 export default function Navbar() {
 	return (
