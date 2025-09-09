@@ -25,16 +25,6 @@ export default function Navbar() {
 							{label}
 						</a>
 					))}
-					<a
-						href={CONFIG.resumeUrl}
-						target="_blank"
-						rel="noreferrer noopener"
-						className="ml-1"
-					>
-						<Pill>
-							<FileText size={16} className="mr-1" /> Resume
-						</Pill>
-					</a>
 				</nav>
 			</div>
 		</header>

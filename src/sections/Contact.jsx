@@ -19,17 +19,6 @@ export default function Contact() {
 						))}
 					</div>
 				</Card>
-				<Card className="p-5">
-					<h3 className="font-medium text-rose-900 mb-2">Quick links</h3>
-					<div className="flex flex-wrap gap-3">
-						<ButtonLink href={CONFIG.resumeUrl} icon={FileText}>
-							Resume
-						</ButtonLink>
-						<ButtonLink href={CONFIG.githubUrl} icon={IconGithub}>
-							GitHub
-						</ButtonLink>
-					</div>
-				</Card>
 			</div>
 		</Section>
 	);
