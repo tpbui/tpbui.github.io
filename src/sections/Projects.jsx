@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import CONFIG from "../config/site";
+import CONFIG from "../content/site";
 import Section from "../components/ui/Section";
 import ProjectCard from "../components/ProjectCard";
 import ProjectModal from "../components/ProjectModal";

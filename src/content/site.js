@@ -65,6 +65,7 @@ const CONFIG = {
 		{
 			id: "p1",
 			title: "Focus Timer",
+			slug: "focus-timer",
 			date: "2025-03-21",
 			design: "Minimal, distraction-free",
 			summary:
@@ -88,6 +89,7 @@ const CONFIG = {
 		{
 			id: "p2",
 			title: "Task Notes",
+			slug: "task-notes",
 			date: "2024-11-10",
 			design: "Card-based, clean",
 			summary: "A lightweight notes / todos hybrid with tag filtering.",

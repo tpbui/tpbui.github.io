@@ -1,4 +1,4 @@
-import CONFIG from "../config/site";
+import CONFIG from "../content/site";
 import Section from "../components/ui/Section";
 import Card from "../components/ui/Card";
 import { Briefcase } from "lucide-react";

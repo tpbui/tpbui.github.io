@@ -1,4 +1,4 @@
-import CONFIG from "../config/site";
+import CONFIG from "../content/site";
 
 export default function Navbar() {
 	return (
