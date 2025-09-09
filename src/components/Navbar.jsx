@@ -7,7 +7,7 @@ export default function Navbar() {
 		<header className="sticky top-0 z-40 backdrop-blur bg-white/90 border-b border-rose-100">
 			<div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
 				<a href="#home" className="font-semibold tracking-tight text-rose-700">
-					{CONFIG.name}
+					{CONFIG.name} - Portfolio
 				</a>
 				<nav className="hidden sm:flex items-center gap-3">
 					{[

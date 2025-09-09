@@ -5,23 +5,35 @@ import { ExternalLink, Mail } from "lucide-react";
 // Site configuration & content
 // ----------------------------------
 const CONFIG = {
-	name: "Name",
+	name: "Tra Bui",
 	role: "Software Engineer",
 	intro:
-		"I build simple, human-friendly apps with a focus on excellent UX. I enjoy rapid prototyping, thoughtful design, and shipping.",
-	location: "Location",
-	email: "you@example.com",
-	resumeUrl: "https://example.com/your-resume.pdf",
-	githubUrl: "https://github.com/your-handle",
+		"Hello! I'm a recent graduate from Carnegie Mellon University with a degree in Computer Science. I'm passionate about software engineer, computer networks, and backend development. If you'd like to see how I build, stick around and explore my projects!",
+	location: "Doha, Qatar",
+	email: "trabui.0517@gmail.com",
+	resumeUrl:
+		"https://drive.google.com/file/d/1QBqLus7yFWJu-NmG4EaTaNBBNSwDbTgy/view?usp=drive_link",
+	githubUrl: "https://github.com/tpbui",
 	links: [
 		{
 			label: "GitHub",
-			href: "https://github.com/your-handle",
+			href: "https://github.com/tpbui",
 			icon: IconGithub,
 		},
-		{ label: "Email", href: "mailto:you@example.com", icon: Mail },
+		{ label: "Email", href: `mailto:{email}`, icon: Mail },
 	],
-	tech: ["Python", "C", "PostgreSQL", "MongoDB", "Docker", "Kubernetes"],
+	tech: [
+		"Python",
+		"C",
+		"React",
+		"Javascript",
+		"PostgreSQL",
+		"MongoDB",
+		"Docker",
+		"Kubernetes",
+		"AWS",
+		"Azure",
+	],
 	experienceSummary:
 		"I've worked across internships and roles where I owned features end-to-end: from ideation and design to implementation, testing, and docs. I'm comfortable collaborating with cross-functional teams and delivering incrementally.",
 	internships: [
