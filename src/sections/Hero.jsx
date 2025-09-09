@@ -23,9 +23,6 @@ export default function Hero() {
 						<ButtonLink href={CONFIG.githubUrl} icon={IconGithub}>
 							GitHub
 						</ButtonLink>
-						<ButtonLink href={`mailto:${CONFIG.email}`} icon={Mail}>
-							Email
-						</ButtonLink>
 						<ButtonLink href={CONFIG.resumeUrl} icon={FileText}>
 							Resume
 						</ButtonLink>

@@ -1,4 +1,5 @@
 import IconGithub from "../icons/IconGithub.jsx";
+import IconLinkedin from "../icons/IconLinkedin.jsx";
 import { ExternalLink, Mail } from "lucide-react";
 
 // ----------------------------------
@@ -21,6 +22,11 @@ const CONFIG = {
 			icon: IconGithub,
 		},
 		{ label: "Email", href: `mailto:{email}`, icon: Mail },
+		{
+			label: "LinkedIn",
+			href: "https://www.linkedin.com/in/trabui-cmu/",
+			icon: IconLinkedin,
+		},
 	],
 	tech: [
 		"Python",
