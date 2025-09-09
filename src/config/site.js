@@ -42,8 +42,10 @@ const CONFIG = {
 			company: "Acme Labs",
 			start: "2024-06-01",
 			end: "2024-09-01",
-			summary:
-				"Implemented a component library and helped migrate a legacy UI to React.",
+			points: [
+				"Implemented a reusable component library",
+				"Migrated legacy UI to React",
+			],
 		},
 	],
 	work: [
@@ -52,8 +54,11 @@ const CONFIG = {
 			company: "Beta Systems",
 			start: "2025-01-15",
 			end: null,
-			summary:
-				"Own dashboard features, improve performance ~30%, and refine design system tokens.",
+			points: [
+				"Owned dashboard features end-to-end",
+				"Improved performance by ~30%",
+				"Refined design system tokens",
+			],
 		},
 	],
 	projects: [

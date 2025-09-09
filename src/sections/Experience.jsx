@@ -26,7 +26,11 @@ export default function Experience() {
 										{dateRange(w.start, w.end)}
 									</span>
 								</div>
-								<p className="text-sm text-rose-900/80 mt-1">{w.summary}</p>
+								<ul className="list-disc list-inside text-sm text-rose-900/80 mt-2 space-y-1">
+									{w.points?.map((p, i) => (
+										<li key={i}>{p}</li>
+									))}
+								</ul>
 							</li>
 						))}
 					</ol>
@@ -46,7 +50,11 @@ export default function Experience() {
 										{dateRange(w.start, w.end)}
 									</span>
 								</div>
-								<p className="text-sm text-rose-900/80 mt-1">{w.summary}</p>
+								<ul className="list-disc list-inside text-sm text-rose-900/80 mt-2 space-y-1">
+									{w.points?.map((p, i) => (
+										<li key={i}>{p}</li>
+									))}
+								</ul>
 							</li>
 						))}
 					</ol>
