@@ -1,8 +1,7 @@
 import Card from "./ui/Card";
 import ButtonLink from "./ui/ButtonLink";
-import { X, Calendar, Link as LinkIcon } from "lucide-react";
+import { X, Calendar, Link as LinkIcon, FileText} from "lucide-react";
 import { formatDate } from "../utils/date";
-import { Link } from "react-router-dom";
 
 export default function ProjectModal({ project, onClose }) {
 	if (!project) return null;
@@ -52,13 +51,14 @@ export default function ProjectModal({ project, onClose }) {
 								</ButtonLink>
 							))}
 							{project.slug ? (
-								<Link
-									to={`/project/${project.slug}`}
-									className="inline-flex items-center gap-2 rounded-xl border border-rose-200 bg-rose-600 px-3 py-2 text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-600"
+								<ButtonLink
+									href={`/project/${project.slug}`}
+									internal
+									icon={FileText}
 									onClick={onClose}
 								>
-									Design Doc
-								</Link>
+									Blog Post
+								</ButtonLink>
 							) : null}
 						</div>
 					) : null}
