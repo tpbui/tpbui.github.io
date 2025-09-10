@@ -35,54 +35,56 @@
 
 /* Light palette */
 :root {
+	/* neutrals */
 	--bg: 0 0% 100%;
-	--fg: 222 47% 11%;
+	--fg: 230 20% 18%;
 
 	--card: 0 0% 100%;
-	--card-fg: 222 47% 11%;
+	--card-fg: var(--fg);
 
-	--muted: 210 40% 96%;
-	--muted-fg: 215 16% 47%;
+	--muted: 315 70% 96%;
+	--muted-fg: 320 25% 40%;
 
-	--border: 214 32% 91%;
-	--ring: 262 83% 58%;
+	--border: 280 30% 88%;
+	--ring: 330 85% 55%;
 
-	--primary: 262 83% 58%;
+	/* brandy bits */
+	--primary: 330 85% 55%;
 	--primary-fg: 0 0% 100%;
 
-	--secondary: 173 70% 46%;
-	--secondary-fg: 176 100% 10%;
+	--secondary: 190 80% 40%;
+	--secondary-fg: 190 100% 10%;
 
-	--accent: 48 100% 55%;
-	--accent-fg: 35 100% 12%;
+	--accent: 45 100% 54%;
+	--accent-fg: 30 100% 12%;
 
-	--shadow: 268 83% 70%;
+	--shadow: 330 85% 70%;
 }
 
 /* Dark palette */
 html.dark {
-	--bg: 257 50% 6%;
-	--fg: 270 20% 94%;
+	--bg: 275 50% 8%;
+	--fg: 280 20% 95%;
 
-	--card: 257 35% 10%;
+	--card: 275 35% 12%;
 	--card-fg: var(--fg);
 
-	--muted: 257 25% 16%;
-	--muted-fg: 270 10% 72%;
+	--muted: 280 30% 18%;
+	--muted-fg: 280 10% 75%;
 
-	--border: 258 25% 20%;
-	--ring: 268 83% 70%;
+	--border: 280 25% 28%;
+	--ring: 330 85% 70%;
 
-	--primary: 268 83% 70%;
-	--primary-fg: 268 100% 12%;
+	--primary: 330 85% 70%;
+	--primary-fg: 330 100% 10%;
 
-	--secondary: 173 70% 46%;
-	--secondary-fg: 176 100% 10%;
+	--secondary: 190 80% 50%;
+	--secondary-fg: 190 100% 10%;
 
-	--accent: 48 100% 55%;
-	--accent-fg: 35 100% 12%;
+	--accent: 45 100% 60%;
+	--accent-fg: 30 100% 12%;
 
-	--shadow: 268 83% 70%;
+	--shadow: 330 85% 70%;
 }
 
 /* Base + small building blocks */
