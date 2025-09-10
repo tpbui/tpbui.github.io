@@ -127,15 +127,52 @@ const CONFIG = {
 	],
 	projects: [
 		{
+			id: "p5",
+			title: "Video CDN",
+			slug: "video-cdn",
+			date: "2025-04",
+			tags: "C, Perl, DNS, Network Programming",
+			summary:
+				"A content delivery network optimized for adaptive bitrate video streaming.",
+			image: "/video-cdn.svg",
+			links: [],
+			details: "",
+		},
+		{
+			id: "p4",
+			title: "BitTorrent",
+			slug: "bit-torrent",
+			date: "2025-03",
+			tags: "C, Perl, TCP, UPD, Network Programming",
+			summary:
+				"A customized peer-to-peer BitTorrent-like file transfer system.",
+			image: "/bit-torrent.svg",
+			links: [],
+			details: "",
+		},
+		{
+			id: "p3",
+			title: "HTTP/HTTPS Server",
+			slug: "http-server",
+			date: "2025-02",
+			tags: "C, HTTP/HTTPS, Network Programming",
+			summary: "An Apache HTTP/HTTPS server built from scratch.",
+			image: "/http-server.svg",
+			links: [],
+			details: "",
+		},
+		{
 			id: "p2",
 			title: "Room Roamer",
 			slug: "room-roamer",
 			date: "2023-04",
 			tags: "Django, Svelte, Javascript, AWS, Google Calendar API, OAuth, Full-Stack Programming",
-			summary: "A web app for booking rooms and discovering campus events with an interactive map.",
+			summary:
+				"A web app for booking rooms and discovering campus events with an interactive map.",
 			image: "/room-roamer-dark.png",
 			links: [],
-			details: "I collaborated in a team of 3 to build a full stack web application for on-campus room searching and event booking interface using Agile software engineering methodology, reducing digital map query time by 15% with user-friendly interactive map interface. We utilized RESTful APIs for backend to integrate OAuth and automate retrieving events into database systems"
+			details:
+				"I collaborated in a team of 3 to build a full stack web application for on-campus room searching and event booking interface using Agile software engineering methodology, reducing digital map query time by 15% with user-friendly interactive map interface. We utilized RESTful APIs for backend to integrate OAuth and automate retrieving events into database systems",
 		},
 		{
 			id: "p1",
