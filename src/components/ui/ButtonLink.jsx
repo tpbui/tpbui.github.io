@@ -8,7 +8,7 @@ export default function ButtonLink({
 	internal = false,
 	className = "",
 }) {
-	const baseClasses = cx("btn btn-primary", className);
+	const baseClasses = cx("btn btn-primary gap-1", className);
 
 	if (internal) {
 		return (
