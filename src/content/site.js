@@ -70,49 +70,26 @@ const CONFIG = {
 	projects: [
 		{
 			id: "p1",
-			title: "Focus Timer",
-			slug: "focus-timer",
-			date: "2025-03-21",
-			design: "Minimal, distraction-free",
+			title: "Space Typing",
+			date: "2021-11",
+			design: "Object-Oriented Programming (OOP), Python, Pygame, Socket Programming",
 			summary:
-				"A Pomodoro-style timer with keyboard shortcuts and offline support.",
-			image: "/image.png", // file in /public
+				"An adaptive space-themed speed typing game.",
+			image: `/space-typing.png`,
 			links: [
 				{
-					label: "Live",
-					href: "https://your-handle.github.io/focus-timer",
+					label: "Demo",
+					href: "https://www.youtube.com/watch?v=J0Ebp09IKm8",
 					icon: ExternalLink,
 				},
 				{
 					label: "Code",
-					href: "https://github.com/your-handle/focus-timer",
+					href: "https://github.com/tpbui/space-typing",
 					icon: IconGithub,
 				},
 			],
 			details:
-				"Built with React + Vite. Uses localStorage for persistence, accessible controls, and sensible defaults.",
-		},
-		{
-			id: "p2",
-			title: "Task Notes",
-			slug: "task-notes",
-			date: "2024-11-10",
-			design: "Card-based, clean",
-			summary: "A lightweight notes / todos hybrid with tag filtering.",
-			image: "/image.png",
-			links: [
-				{
-					label: "Live",
-					href: "https://your-handle.github.io/task-notes",
-					icon: ExternalLink,
-				},
-				{
-					label: "Code",
-					href: "https://github.com/your-handle/task-notes",
-					icon: IconGithub,
-				},
-			],
-			details: "Fast search, keyboard nav, and export to JSON.",
+				"Space Typing Game is a speed typing game in the form of a space video game that can give the user a fun time to practice their typing skills. The player will be given a limited amount of health to start with, and their mission is to use their typing skills to avoid asteroids from hitting them and survive through all the game levels. This game is developed using Pygame as the main module, and utilize Socket to incorporate networking features.",
 		},
 	],
 };

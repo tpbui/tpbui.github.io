@@ -1,6 +1,6 @@
 import Card from "./ui/Card";
-import Pill from "./ui/Pill";
-import { Calendar, ChevronRight } from "lucide-react";
+import ButtonLink from "./ui/ButtonLink";
+import { Calendar, ChevronRight, FileText } from "lucide-react";
 import { formatDate } from "../utils/date";
 
 export default function ProjectCard({ project, onOpen }) {
@@ -27,12 +27,32 @@ export default function ProjectCard({ project, onOpen }) {
 							<Calendar size={14} /> {formatDate(project.date)}
 						</span>
 					</div>
-					<p className="mt-2 text-sm text-rose-900/80">{project.summary}</p>
-					<div className="mt-3">
-						<Pill className="bg-rose-100 text-rose-700 border-rose-200">
-							Design: {project.design}
-						</Pill>
-					</div>
+					<p className="mt-2 text-sm text-rose-900/80 italic">
+						{project.summary}
+					</p>
+
+					{project.links?.length ? (
+						<div className="mt-4 flex flex-wrap gap-3">
+							{project.links.map((l) => (
+								<ButtonLink
+									key={l.href}
+									href={l.href}
+									icon={l.icon || LinkIcon}
+								>
+									{l.label}
+								</ButtonLink>
+							))}
+							{project.slug ? (
+								<ButtonLink
+									href={`/project/${project.slug}`}
+									internal
+									icon={FileText}
+								>
+									Blog
+								</ButtonLink>
+							) : null}
+						</div>
+					) : null}
 				</div>
 			</button>
 		</Card>
