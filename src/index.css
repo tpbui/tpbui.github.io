@@ -1,19 +1,119 @@
 @import "tailwindcss";
 
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+/* Tell Tailwind where to look for class names (v4) */
+@source "../index.html";
+@source "../**/*.{js,jsx,ts,tsx}";
 
-  color-scheme: light dark;
-  background-color: #ffffff;
-  scrollbar-gutter: stable;
+/* Define Tailwind color tokens */
+@theme {
+	/* radius */
+	--radius: 12px;
+	--radius-lg: var(--radius);
+	--radius-md: calc(var(--radius) - 2px);
+	--radius-sm: calc(var(--radius) - 4px);
+
+	/* shadow token */
+	--shadow-brand: 0 10px 30px -10px hsl(var(--shadow) / 0.25);
+
+	/* Tailwind color tokens */
+	--color-background: hsl(var(--bg));
+	--color-foreground: hsl(var(--fg));
+	--color-card: hsl(var(--card));
+	--color-card-foreground: hsl(var(--card-fg));
+	--color-muted: hsl(var(--muted));
+	--color-muted-foreground: hsl(var(--muted-fg));
+	--color-border: hsl(var(--border));
+	--color-ring: hsl(var(--ring));
+
+	--color-primary: hsl(var(--primary));
+	--color-primary-foreground: hsl(var(--primary-fg));
+	--color-secondary: hsl(var(--secondary));
+	--color-secondary-foreground: hsl(var(--secondary-fg));
+	--color-accent: hsl(var(--accent));
+	--color-accent-foreground: hsl(var(--accent-fg));
 }
 
+/* Light palette */
+:root {
+	--bg: 0 0% 100%;
+	--fg: 222 47% 11%;
+
+	--card: 0 0% 100%;
+	--card-fg: 222 47% 11%;
+
+	--muted: 210 40% 96%;
+	--muted-fg: 215 16% 47%;
+
+	--border: 214 32% 91%;
+	--ring: 262 83% 58%;
+
+	--primary: 262 83% 58%;
+	--primary-fg: 0 0% 100%;
+
+	--secondary: 173 70% 46%;
+	--secondary-fg: 176 100% 10%;
+
+	--accent: 48 100% 55%;
+	--accent-fg: 35 100% 12%;
+
+	--shadow: 268 83% 70%;
+}
+
+/* Dark palette */
+html.dark {
+	--bg: 257 50% 6%;
+	--fg: 270 20% 94%;
+
+	--card: 257 35% 10%;
+	--card-fg: var(--fg);
+
+	--muted: 257 25% 16%;
+	--muted-fg: 270 10% 72%;
+
+	--border: 258 25% 20%;
+	--ring: 268 83% 70%;
+
+	--primary: 268 83% 70%;
+	--primary-fg: 268 100% 12%;
+
+	--secondary: 173 70% 46%;
+	--secondary-fg: 176 100% 10%;
+
+	--accent: 48 100% 55%;
+	--accent-fg: 35 100% 12%;
+
+	--shadow: 268 83% 70%;
+}
+
+/* Base + small building blocks */
+* {
+	@apply border-border;
+}
 body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
+	@apply bg-background text-foreground;
+}
+
+.card {
+	@apply bg-card text-card-foreground border border-border rounded-xl;
+	box-shadow: var(--shadow-brand);
+}
+
+/* Baseline button */
+.btn {
+	@apply inline-flex items-center justify-center rounded-lg px-4 py-2 font-medium transition-colors
+         focus:outline-none focus-visible:ring-2 ring-ring ring-offset-2 ring-offset-background;
+}
+
+/* Variants add only utilities here */
+.btn-primary {
+	@apply bg-primary text-primary-foreground hover:bg-primary/90;
+}
+.btn-secondary {
+	@apply bg-secondary text-secondary-foreground hover:bg-secondary/90;
+}
+
+.chip {
+	@apply rounded-full bg-muted text-muted-foreground px-3 py-1 border;
 }
 
 html {

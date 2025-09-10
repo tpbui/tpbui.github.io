@@ -20,7 +20,7 @@ function Home() {
 
 export default function App() {
 	return (
-		<div className="min-h-screen overflow-x-hidden bg-white text-rose-950">
+		<div className="min-h-screen overflow-x-hidden bg-background text-foreground">
 			<Navbar />
 			<Routes>
 				<Route path="/" element={<Home />} />

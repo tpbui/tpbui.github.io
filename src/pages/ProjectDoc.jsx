@@ -28,10 +28,10 @@ export default function ProjectDoc() {
 		return (
 			<section className="max-w-3xl mx-auto px-4 py-10">
 				<Card className="p-6">
-					<h1 className="text-xl font-semibold text-rose-900">
+					<h1 className="text-xl font-semibold text-foreground">
 						Project not found
 					</h1>
-					<p className="mt-2 text-rose-900/80">
+					<p className="mt-2 text-muted-foreground">
 						We couldn't find a project with slug “{slug}”.
 					</p>
 				</Card>
@@ -64,10 +64,10 @@ export default function ProjectDoc() {
 			const id = slugify(String(plain));
 			const cls =
 				Tag === "h1"
-					? "text-3xl font-semibold tracking-tight text-rose-800"
+					? "text-3xl font-semibold tracking-tight text-foreground"
 					: Tag === "h2"
-					? "text-2xl font-semibold text-rose-800 mt-8"
-					: "text-xl font-semibold text-rose-800 mt-6";
+					? "text-2xl font-semibold text-foreground mt-8"
+					: "text-xl font-semibold text-foreground mt-6";
 
 			return (
 				<Tag id={id} className={`${cls} scroll-mt-24`}>
@@ -80,10 +80,10 @@ export default function ProjectDoc() {
 		<section className="max-w-3xl mx-auto px-4 py-10">
 			{/* Post header */}
 			<header className="mb-4">
-				<h1 className="text-3xl font-semibold tracking-tight text-rose-800">
+				<h1 className="text-3xl font-semibold tracking-tight text-foreground">
 					{project.title}
 				</h1>
-				<div className="mt-2 flex flex-wrap items-center gap-3 text-rose-900/70">
+				<div className="mt-2 flex flex-wrap items-center gap-3 text-muted-foreground">
 					<span>{formatDate(project.date)}</span>
 					{project.design ? <Pill>Design: {project.design}</Pill> : null}
 				</div>
@@ -95,7 +95,7 @@ export default function ProjectDoc() {
 			</div>
 
 			{/* Markdown content */}
-			<article className="prose prose-rose max-w-none">
+			<article className="prose max-w-none text-foreground">
 				<ReactMarkdown
 					remarkPlugins={[remarkGfm]}
 					components={{
@@ -106,10 +106,10 @@ export default function ProjectDoc() {
 							<figure className="my-6">
 								<img
 									{...props}
-									className="rounded-xl border border-rose-100 mx-auto"
+									className="rounded-xl border border-border mx-auto"
 								/>
 								{props.alt ? (
-									<figcaption className="text-xs text-rose-900/60 mt-2 text-center">
+									<figcaption className="text-xs text-muted-foreground mt-2 text-center">
 										{props.alt}
 									</figcaption>
 								) : null}
@@ -118,14 +118,14 @@ export default function ProjectDoc() {
 						a: (props) => (
 							<a
 								{...props}
-								className="text-rose-700 underline hover:no-underline"
+								className="text-primary underline hover:no-underline"
 							/>
 						),
 						code: ({ inline, className, children, ...rest }) => {
 							if (inline)
 								return <code className="px-1 py-0.5 rounded">{children}</code>;
 							return (
-								<pre className="rounded-xl border border-rose-100 p-4 overflow-auto">
+								<pre className="rounded-xl border border-border p-4 overflow-auto">
 									<code className={className} {...rest}>
 										{children}
 									</code>

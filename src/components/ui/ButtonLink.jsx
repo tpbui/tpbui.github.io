@@ -1,13 +1,14 @@
 import { Link as RouterLink } from "react-router-dom";
+import { cx } from "../../utils/cx";
 
 export default function ButtonLink({
 	href,
 	children,
 	icon: Icon,
 	internal = false,
+	className = "",
 }) {
-	const baseClasses =
-		"inline-flex items-center gap-2 rounded-xl border border-rose-200 bg-rose-600 px-3 py-2 text-white hover:text-[#535bf2] focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-600";
+	const baseClasses = cx("btn btn-primary", className);
 
 	if (internal) {
 		return (

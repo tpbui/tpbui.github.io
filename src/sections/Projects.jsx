@@ -25,13 +25,13 @@ export default function Projects() {
 					placeholder="Search projects by title, summary, or design…"
 					value={query}
 					onChange={(e) => setQuery(e.target.value)}
-					className="w-full sm:max-w-md rounded-xl border border-rose-100 bg-white px-4 py-2 focus:outline-none focus:ring-2 focus:ring-rose-600"
+					className="w-full sm:max-w-md rounded-xl border border-border bg-background text-foreground px-4 py-2 focus:outline-none focus-visible:ring-2 ring-ring ring-offset-2 ring-offset-background"
 				/>
-				<span className="text-sm text-rose-900/70">
+				<span className="text-sm text-muted-foreground">
 					{filtered.length} shown
 				</span>
 			</div>
-			<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+			<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
 				{filtered.map((p) => (
 					<ProjectCard key={p.id} project={p} onOpen={setSelected} />
 				))}

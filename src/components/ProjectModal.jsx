@@ -15,22 +15,22 @@ export default function ProjectModal({ project, onClose }) {
 		<div className="fixed inset-0 z-50 flex items-center justify-center p-4">
 			{/* backdrop */}
 			<button
-				className="absolute inset-0 bg-black/50"
+				className="absolute inset-0 bg-black/60 backdrop-blur-sm"
 				aria-label="Close overlay"
 				onClick={onClose}
 			/>
 
 			{/* dialog */}
 			<Card
-				className="relative w-full max-w-2xl bg-white rounded-2xl shadow-xl
-                   max-h-[90vh] overflow-hidden flex flex-col"
+				className="card relative w-full max-w-2xl max-h-[90vh] overflow-hidden flex flex-col
+                   animate-in fade-in-50 zoom-in-95 duration-200"
 				role="dialog"
 				aria-modal="true"
 				aria-labelledby="project-modal-title"
 			>
 				{/* close */}
 				<button
-					className="absolute right-3 top-3 rounded-full p-2 hover:bg-rose-100"
+					className="absolute right-3 top-3 rounded-full p-2 text-muted-foreground hover:bg-muted transition-colors focus:outline-none focus-visible:ring-2 ring-ring ring-offset-2 ring-offset-background"
 					aria-label="Close"
 					onClick={onClose}
 				>
@@ -42,12 +42,12 @@ export default function ProjectModal({ project, onClose }) {
 					<div className="flex flex-col gap-2">
 						<h3
 							id="project-modal-title"
-							className="text-xl font-semibold text-rose-900"
+							className="text-xl font-semibold text-foreground"
 						>
 							{project.title}
 						</h3>
 
-						<div className="flex flex-wrap items-center gap-2 text-sm text-rose-900/70">
+						<div className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
 							<Calendar size={16} />
 							<span>{formatDate(project.date)}</span>
 						</div>
@@ -56,11 +56,11 @@ export default function ProjectModal({ project, onClose }) {
 					</div>
 
 					{project.summary && (
-						<p className="text-rose-900/90 italic">{project.summary}</p>
+						<p className="text-muted-foreground italic">{project.summary}</p>
 					)}
 
 					{project.details && (
-						<p className="text-rose-900/90 whitespace-pre-line">
+						<p className="text-foreground whitespace-pre-line">
 							{project.details}
 						</p>
 					)}
@@ -68,13 +68,14 @@ export default function ProjectModal({ project, onClose }) {
 
 				{/* FOOTER */}
 				{hasAnyButtons && (
-					<div className="p-4 sm:p-6 border-t bg-white sticky bottom-0">
+					<div className="p-4 sm:p-6 border-t border-border bg-card sticky bottom-0">
 						<div className="flex flex-wrap gap-3">
 							{primaryLinks.map((l) => (
 								<ButtonLink
 									key={l.href}
 									href={l.href}
 									icon={l.icon || LinkIcon}
+									className="btn btn-secondary"
 								>
 									{l.label}
 								</ButtonLink>
@@ -85,6 +86,7 @@ export default function ProjectModal({ project, onClose }) {
 									internal
 									icon={FileText}
 									onClick={onClose}
+									className="btn btn-primary"
 								>
 									Blog
 								</ButtonLink>
