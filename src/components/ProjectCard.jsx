@@ -42,15 +42,18 @@ export default function ProjectCard({ project, onOpen }) {
 									{l.label}
 								</ButtonLink>
 							))}
-							{project.slug ? (
-								<ButtonLink
-									href={`/project/${project.slug}`}
-									internal
-									icon={FileText}
-								>
-									Blog
-								</ButtonLink>
-							) : null}
+						</div>
+					) : null}
+
+					{project.slug ? (
+						<div className="mt-4 flex flex-wrap gap-3">
+							<ButtonLink
+								href={`/project/${project.slug}`}
+								internal
+								icon={FileText}
+							>
+								Blog
+							</ButtonLink>
 						</div>
 					) : null}
 				</div>

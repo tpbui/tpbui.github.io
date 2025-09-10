@@ -52,7 +52,7 @@ export default function ProjectModal({ project, onClose }) {
 							<span>{formatDate(project.date)}</span>
 						</div>
 
-						<TagList value={project.design} />
+						<TagList value={project.tags} />
 					</div>
 
 					{project.summary && (
@@ -86,7 +86,7 @@ export default function ProjectModal({ project, onClose }) {
 									icon={FileText}
 									onClick={onClose}
 								>
-									Blog Post
+									Blog
 								</ButtonLink>
 							)}
 						</div>

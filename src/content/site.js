@@ -127,11 +127,21 @@ const CONFIG = {
 	],
 	projects: [
 		{
+			id: "p2",
+			title: "Room Roamer",
+			slug: "room-roamer",
+			date: "2023-04",
+			tags: "Django, Svelte, Javascript, AWS, Google Calendar API, OAuth, Full-Stack Programming",
+			summary: "A web app for booking rooms and discovering campus events with an interactive map.",
+			image: "/room-roamer-dark.png",
+			links: [],
+			details: "I collaborated in a team of 3 to build a full stack web application for on-campus room searching and event booking interface using Agile software engineering methodology, reducing digital map query time by 15% with user-friendly interactive map interface. We utilized RESTful APIs for backend to integrate OAuth and automate retrieving events into database systems"
+		},
+		{
 			id: "p1",
 			title: "Space Typing",
 			date: "2021-11",
-			design:
-				"Object-Oriented Programming (OOP), Python, Pygame, Socket Programming",
+			tags: "Object-Oriented Programming (OOP), Python, Pygame, Socket Programming",
 			summary: "An adaptive space-themed speed typing game.",
 			image: `/space-typing.png`,
 			links: [
