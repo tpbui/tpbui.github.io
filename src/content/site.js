@@ -40,30 +40,88 @@ const CONFIG = {
 		"AWS",
 		"Azure",
 	],
-	experienceSummary:
-		"I've worked across internships and roles where I owned features end-to-end: from ideation and design to implementation, testing, and docs. I'm comfortable collaborating with cross-functional teams and delivering incrementally.",
 	internships: [
 		{
-			title: "Frontend Intern",
-			company: "Acme Labs",
-			start: "2024-06-01",
-			end: "2024-09-01",
+			title: "Software Engineer Intern",
+			company: "Snoonu",
+			start: "2025-04",
+			end: null,
 			points: [
-				"Implemented a reusable component library",
-				"Migrated legacy UI to React",
+				"Led end-to-end implementation of an AI driver-facing chatbot for a food delivery mobile app, automating order issue reporting",
+				"Automated 80% of driver support conversations and reduced the live agent contact rate by 30% in staging environment",
+				"Built a scalable, highly concurrent backend architecture and integrated with Salesforce and Slack to handle 15+ production scenarios",
+			],
+		},
+		{
+			title: "Software Engineer Intern",
+			company: "Pandata Tech",
+			start: "2025-05",
+			end: "2025-08",
+			points: [
+				"Refactored a FastAPI microservice to support relational and NoSQL database migrations for disaster recovery",
+				"Built a type-safe and generic database query interface through REST APIs and asynchronous framework for third-party SDKs",
+				"Saved 4-6 hours per week by automating unit test and integration test and building a CLI tool to streamline manual test workflows",
+				"Designed, wrote documentation, tested, debugged, and deployed new feature with extensive code review and source control",
+			],
+		},
+		{
+			title: "Open Source Developer",
+			company: "OpenStack",
+			start: "2024-05",
+			end: "2024-08",
+			points: [
+				"Contributed new features to OpenStack Swift distributed systems, which were deployed to production for upcoming releases",
+				"Provided object-count quota per user account in middleware layer, extending legacy code to support backward compatibility",
+				"Integrated CLI tools to monitor the progress of reaping deleted accounts using multi-threading and wrote unit tests",
+			],
+		},
+		{
+			title: "Software Engineer Intern",
+			company: "Qatar Computing Research Institute",
+			start: "2023-05",
+			end: "2023-10",
+			points: [
+				"Optimized debugging tools for parallel traffic simulator (QarSumo) of Qatar national network in a complex industry codebase, leveraging OOP principles to shorten runtime cycle by 10x and boost daily team productivity by 20%",
+				"Led a team in executing a new idea to develop shared data structures across distributed nodes, leveraging simulation accuracy to 94%",
+				"Awarded first prize for poster presentation out of 28 team projects at final showcase conference",
 			],
 		},
 	],
-	work: [
+	academic: [
 		{
-			title: "Junior Software Engineer",
-			company: "Beta Systems",
-			start: "2025-01-15",
-			end: null,
+			title: "Teaching Assistant (Cloud Computing 15319/15619)",
+			company: "Carnegie Mellon University",
+			start: "2024-11",
+			end: "2025-05",
 			points: [
-				"Owned dashboard features end-to-end",
-				"Improved performance by ~30%",
-				"Refined design system tokens",
+				"Supported ~200 students via Piazza and weekly office hours",
+				"Provided guidance on programming, conceptual questions, and VM-based troubleshooting for all cloud programming projects",
+				"Performed quality assurance on auto-grading infrastructure for iterative big data processing project with Spark",
+				"Authored a new conceptual module on Delta Lake for cloud storage and data analytics, to be delivered to ~200 students",
+			],
+		},
+		{
+			title: "Undergraduate Researcher",
+			company: "Carnegie Mellon University",
+			start: "2024-08",
+			end: "2025-02",
+			points: [
+				"Conducted evaluations of leading Automatic Speech Recognition (ASR) systems in transcribing children disordered speech",
+				"Explored literature in speech enhancement, reinforcement learning, and deep learning techniques to improve these systems",
+			],
+		},
+		{
+			title: "Course Assistant",
+			company: "Carnegie Mellon University",
+			start: "2022-1",
+			end: "2025-05-1",
+			points: [
+				"01/2022 - 05/2022: Intro to Programming (15-112)",
+				"01/2023 - 05/2023: Calculus II (21-122)",
+				"08/2024 - 12/2024: Evolution (03-125)",
+				"01/2025 - 05/2025: Great Theoretical Ideas in Computer Science (15-251)",
+				"01/2025 - 05/2025: Cloud Computing (15-319/15-619)",
+				"01/2025 - 05/2025: Principles of Imperative Programming (15-122)",
 			],
 		},
 	],
@@ -72,9 +130,9 @@ const CONFIG = {
 			id: "p1",
 			title: "Space Typing",
 			date: "2021-11",
-			design: "Object-Oriented Programming (OOP), Python, Pygame, Socket Programming",
-			summary:
-				"An adaptive space-themed speed typing game.",
+			design:
+				"Object-Oriented Programming (OOP), Python, Pygame, Socket Programming",
+			summary: "An adaptive space-themed speed typing game.",
 			image: `/space-typing.png`,
 			links: [
 				{
