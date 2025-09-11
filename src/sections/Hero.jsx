@@ -2,12 +2,13 @@ import { FileText } from "lucide-react";
 import Card from "../components/ui/Card";
 import Pill from "../components/ui/Pill";
 import ButtonLink from "../components/ui/ButtonLink";
+import Section from "../components/ui/Section";
 import IconGithub from "../icons/IconGithub";
 import CONFIG from "../content/site";
 
 export default function Hero() {
 	return (
-		<section id="home" className="max-w-5xl mx-auto px-4 py-24">
+		<Section id="home" className="max-w-5xl mx-auto px-4 py-24" reveal twoWay stagger variant>
 			<div className="grid sm:grid-cols-5 gap-8 items-center">
 				<div className="sm:col-span-3">
 					<h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
@@ -45,6 +46,6 @@ export default function Hero() {
 					</div>
 				</Card>
 			</div>
-		</section>
+		</Section>
 	);
 }

@@ -5,7 +5,7 @@ import CONFIG from "../content/site";
 
 export default function Contact() {
 	return (
-		<Section id="contact" title="Connect">
+		<Section id="contact" title="Connect" reveal twoWay stagger variant>
 			<div className="grid sm:grid-cols-2 gap-6">
 				<Card className="p-5">
 					<h3 className="font-medium text-foreground mb-2">Get in touch</h3>

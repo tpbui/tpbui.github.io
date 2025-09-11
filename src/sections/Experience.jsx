@@ -6,7 +6,7 @@ import CONFIG from "../content/site";
 
 export default function Experience() {
 	return (
-		<Section id="experience" title="Experience">
+		<Section id="experience" title="Experience" reveal twoWay stagger variant>
 			<Card className="p-5">
 				<div className="flex items-center gap-2 text-foreground mb-3">
 					<Briefcase size={18} className="text-primary" />

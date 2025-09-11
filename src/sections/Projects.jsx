@@ -19,7 +19,7 @@ export default function Projects() {
 	}, [query]);
 
 	return (
-		<Section id="projects" title="Projects">
+		<Section id="projects" title="Projects" reveal twoWay stagger variant>
 			<div className="flex flex-col sm:flex-row sm:items-center gap-3">
 				<input
 					placeholder="Search projects by title, summary, or design…"
