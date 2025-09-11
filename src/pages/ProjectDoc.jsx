@@ -1,13 +1,13 @@
 import { useMemo, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import CONFIG from "../content/site";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import Card from "../components/ui/Card";
 import Pill from "../components/ui/Pill";
 import TableOfContent from "../components/TableOfContent";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
 import { formatDate } from "../utils/date";
 import { slugify } from "../utils/slug";
+import CONFIG from "../content/site";
 
 export default function ProjectDoc() {
 	const { slug } = useParams();

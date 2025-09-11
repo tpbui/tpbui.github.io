@@ -1,7 +1,7 @@
-import Card from "./ui/Card";
-import ButtonLink from "./ui/ButtonLink";
 import { Calendar, ChevronRight, FileText } from "lucide-react";
 import { formatDate } from "../utils/date";
+import Card from "./ui/Card";
+import ButtonLink from "./ui/ButtonLink";
 
 export default function ProjectCard({ project, onOpen }) {
 	return (

@@ -1,8 +1,8 @@
+import { X, Calendar, Link as LinkIcon, FileText } from "lucide-react";
+import { formatDate } from "../utils/date";
 import Card from "./ui/Card";
 import ButtonLink from "./ui/ButtonLink";
 import TagList from "./ui/TagList";
-import { X, Calendar, Link as LinkIcon, FileText } from "lucide-react";
-import { formatDate } from "../utils/date";
 
 export default function ProjectModal({ project, onClose }) {
 	if (!project) return null;

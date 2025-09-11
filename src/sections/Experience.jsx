@@ -1,8 +1,8 @@
-import CONFIG from "../content/site";
+import { Briefcase } from "lucide-react";
 import Section from "../components/ui/Section";
 import Card from "../components/ui/Card";
-import { Briefcase } from "lucide-react";
 import { dateRange } from "../utils/date";
+import CONFIG from "../content/site";
 
 export default function Experience() {
 	return (

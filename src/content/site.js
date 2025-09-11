@@ -1,6 +1,6 @@
+import { ExternalLink, Mail } from "lucide-react";
 import IconGithub from "../icons/IconGithub.jsx";
 import IconLinkedin from "../icons/IconLinkedin.jsx";
-import { ExternalLink, Mail } from "lucide-react";
 
 // ----------------------------------
 // Site configuration & content

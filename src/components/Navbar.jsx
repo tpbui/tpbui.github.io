@@ -1,7 +1,7 @@
-import CONFIG from "../content/site";
+import { useEffect, useState } from "react";
 import { Sun, Moon } from "lucide-react";
 import { getTheme, toggleTheme } from "../utils/theme";
-import { useEffect, useState } from "react";
+import CONFIG from "../content/site";
 
 export default function Navbar() {
 	const [mode, setMode] = useState("dark");

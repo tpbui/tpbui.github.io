@@ -1,9 +1,9 @@
-import CONFIG from "../content/site";
+import { FileText } from "lucide-react";
 import Card from "../components/ui/Card";
 import Pill from "../components/ui/Pill";
 import ButtonLink from "../components/ui/ButtonLink";
-import { FileText, Mail } from "lucide-react";
 import IconGithub from "../icons/IconGithub";
+import CONFIG from "../content/site";
 
 export default function Hero() {
 	return (

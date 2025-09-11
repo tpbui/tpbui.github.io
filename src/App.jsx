@@ -1,11 +1,11 @@
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Hero from "./sections/Hero";
 import Projects from "./sections/Projects";
 import Experience from "./sections/Experience";
 import Contact from "./sections/Contact";
-import Footer from "./components/Footer";
 import ProjectDoc from "./pages/ProjectDoc";
-import { Routes, Route } from "react-router-dom";
 
 function Home() {
 	return (

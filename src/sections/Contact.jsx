@@ -1,7 +1,7 @@
-import CONFIG from "../content/site";
 import Section from "../components/ui/Section";
 import Card from "../components/ui/Card";
 import ButtonLink from "../components/ui/ButtonLink";
+import CONFIG from "../content/site";
 
 export default function Contact() {
 	return (
