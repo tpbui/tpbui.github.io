@@ -26,7 +26,11 @@ export default function Navbar() {
 						<a
 							key={label}
 							href={href}
-							className="text-muted-foreground hover:text-foreground px-3 py-2 rounded-md transition-colors"
+							className="relative text-sm text-muted-foreground hover:text-foreground transition-colors
+              px-3 py-2 rounded focus:outline-none focus-visible:ring-2 ring-ring
+              ring-offset-2 ring-offset-background
+              after:absolute after:left-0 after:-bottom-0.5 after:h-px after:w-0
+              after:bg-primary hover:after:w-full after:transition-all"
 						>
 							{label}
 						</a>
