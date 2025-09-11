@@ -41,7 +41,7 @@ export default function ProjectCard({ project, onOpen }) {
 									key={l.href}
 									href={l.href}
 									icon={l.icon || LinkIcon}
-									className="btn btn-secondary"
+									className="btn btn-primary"
 								>
 									{l.label}
 								</ButtonLink>

@@ -30,7 +30,7 @@ export default function Hero() {
 						<ButtonLink
 							href={CONFIG.resumeUrl}
 							icon={FileText}
-							className="btn btn-primary"
+							className="btn btn-secondary"
 						>
 							Resume
 						</ButtonLink>

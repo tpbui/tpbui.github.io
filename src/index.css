@@ -111,7 +111,7 @@ body {
 	@apply bg-primary text-primary-foreground hover:bg-primary/90;
 }
 .btn-secondary {
-	@apply bg-secondary text-secondary-foreground hover:bg-secondary/90;
+	@apply bg-secondary text-primary-foreground hover:bg-secondary/90;
 }
 
 .chip {
