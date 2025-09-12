@@ -200,7 +200,6 @@ const CONFIG = {
 };
 
 export const skills = {
-	title: "Skills",
 	legend: {
 		show: true,
 		levels: [
@@ -214,13 +213,13 @@ export const skills = {
 			key: "swe",
 			title: "Software Engineering",
 			blurb: "Collaboration, testing, design patterns",
+			columns: 1,
 			items: [
 				{ name: "Version Control", proficiency: "proficient" },
-				{ name: "Code Review", proficiency: "proficient" },
 				{ name: "Object-Oriented Programming", proficiency: "proficient" },
 				{ name: "Data Structure & Algorithms", proficiency: "proficient" },
-				{ name: "API Design", proficiency: "proficient" },
-				{ name: "Documentation", proficiency: "proficient" },
+				{ name: "API Design & Documentation", proficiency: "proficient" },
+				{ name: "Code Review", proficiency: "proficient" },
 				{ name: "Testing", proficiency: "proficient" },
 				{ name: "Agile/Scrum", proficiency: "proficient" },
 			],
@@ -229,7 +228,7 @@ export const skills = {
 			key: "languages",
 			title: "Programming Languages",
 			blurb: "Focused on backend programming",
-
+			columns: 2,
 			items: [
 				{ name: "Python", proficiency: "proficient" },
 				{ name: "C", proficiency: "proficient" },
@@ -268,6 +267,7 @@ export const skills = {
 			key: "devops-systems",
 			title: "DevOps & Systems",
 			blurb: "Infratructure-as-code, containers, CI/CD",
+			columns: 2,
 			items: [
 				{ name: "Azure", proficiency: "proficient" },
 				{ name: "AWS", proficiency: "proficient" },
@@ -285,6 +285,7 @@ export const skills = {
 			key: "web-dev",
 			title: "Web Development",
 			blurb: "From prototypes to production",
+			columns: 2,
 			items: [
 				{ name: "FastAPI", proficiency: "proficient" },
 				{ name: "PostgreSQL", proficiency: "proficient" },
@@ -300,6 +301,7 @@ export const skills = {
 			key: "ml-ai",
 			title: "Deep Learning & AI",
 			blurb: "Model training, LLM tooling",
+			columns: 2,
 			items: [
 				{ name: "PyTorch", proficiency: "proficient" },
 				{ name: "NumPy", proficiency: "proficient" },

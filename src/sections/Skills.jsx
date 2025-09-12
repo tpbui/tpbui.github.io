@@ -44,7 +44,7 @@ function SkillCard({ title, blurb, items, columns = 2 }) {
 		])
 	);
 
-	const listClass = `grid grid-cols-${columns} sm:w-full max-w-[32rem] mx-auto gap-y-1 justify-items-start`;
+	const listClass = `grid grid-cols-${columns} sm:grid-cols-${columns} sm:w-full max-w-[32rem] mx-auto gap-y-1 justify-items-start`;
 
 	const sorted = [...items].sort(
 		(a, b) =>
@@ -79,7 +79,7 @@ function SkillCard({ title, blurb, items, columns = 2 }) {
 }
 
 export default function Skills() {
-	const { title, tagline, legend, groups } = skillsContent;
+	const { legend, groups } = skillsContent;
 
 	return (
 		<Section id="skills" title="Skills" reveal twoWay stagger variant>
@@ -91,7 +91,7 @@ export default function Skills() {
 						title={title}
 						blurb={blurb}
 						items={items}
-						columns={columns ? 1 : 2}
+						columns={columns}
 					/>
 				))}
 			</div>
