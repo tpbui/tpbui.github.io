@@ -199,4 +199,118 @@ const CONFIG = {
 	],
 };
 
+export const skills = {
+	title: "Skills",
+	legend: {
+		show: true,
+		levels: [
+			{ key: "proficient", label: "Proficient", class: "bg-emerald-500" },
+			{ key: "familiar", label: "Familiar", class: "bg-sky-500" },
+			{ key: "learning", label: "Learning", class: "bg-amber-500" },
+		],
+	},
+	groups: [
+		{
+			key: "swe",
+			title: "Software Engineering",
+			blurb: "Collaboration, testing, design patterns",
+			items: [
+				{ name: "Version Control", proficiency: "proficient" },
+				{ name: "Code Review", proficiency: "proficient" },
+				{ name: "Object-Oriented Programming", proficiency: "proficient" },
+				{ name: "Data Structure & Algorithms", proficiency: "proficient" },
+				{ name: "API Design", proficiency: "proficient" },
+				{ name: "Documentation", proficiency: "proficient" },
+				{ name: "Testing", proficiency: "proficient" },
+				{ name: "Agile/Scrum", proficiency: "proficient" },
+			],
+		},
+		{
+			key: "languages",
+			title: "Programming Languages",
+			blurb: "Focused on backend programming",
+
+			items: [
+				{ name: "Python", proficiency: "proficient" },
+				{ name: "C", proficiency: "proficient" },
+				{ name: "x86-assembly", proficiency: "proficient" },
+				{ name: "C++", proficiency: "familiar" },
+				{ name: "JavaScript", proficiency: "familiar" },
+				{ name: "Go", proficiency: "familiar" },
+				{ name: "Rust", proficiency: "learning" },
+				{ name: "C#", proficiency: "learning" },
+			],
+		},
+		{
+			key: "network",
+			title: "Computer Networks",
+			blurb: "Network Protocols and Tools",
+			columns: 1,
+			items: [
+				{
+					name: "Core Networking: IPv4/IPv6, TCP/UDP, ICMP, ARP",
+					proficiency: "proficient",
+				},
+				{ name: "Routing: OSPF, BGP, MPLS", proficiency: "proficient" },
+				{ name: "Data Link Layer: Ethernet, VLANs", proficiency: "proficient" },
+				{
+					name: "Application layer: DNS, DHCP, HTTP/HTTPS, SSH",
+					proficiency: "proficient",
+				},
+				{
+					name: "Connectivity & security: NAT, VPN",
+					proficiency: "proficient",
+				},
+				{ name: "Diagnostics: Wireshark", proficiency: "familiar" },
+			],
+		},
+		{
+			key: "devops-systems",
+			title: "DevOps & Systems",
+			blurb: "Infratructure-as-code, containers, CI/CD",
+			items: [
+				{ name: "Azure", proficiency: "proficient" },
+				{ name: "AWS", proficiency: "proficient" },
+				{ name: "GCP", proficiency: "proficient" },
+				{ name: "VM", proficiency: "proficient" },
+				{ name: "Linux", proficiency: "proficient" },
+				{ name: "Docker", proficiency: "proficient" },
+				{ name: "Kubernetes", proficiency: "familiar" },
+				{ name: "Terraform", proficiency: "familiar" },
+				{ name: "GitHub Actions", proficiency: "familiar" },
+				{ name: "Kafka", proficiency: "familiar" },
+			],
+		},
+		{
+			key: "web-dev",
+			title: "Web Development",
+			blurb: "From prototypes to production",
+			items: [
+				{ name: "FastAPI", proficiency: "proficient" },
+				{ name: "PostgreSQL", proficiency: "proficient" },
+				{ name: "MySQL", proficiency: "proficient" },
+				{ name: "SQLAlchemy", proficiency: "proficient" },
+				{ name: "MongoDB", proficiency: "proficient" },
+				{ name: "HTML/CSS", proficiency: "familiar" },
+				{ name: "React", proficiency: "familiar" },
+				{ name: "Tailwind CSS", proficiency: "familiar" },
+			],
+		},
+		{
+			key: "ml-ai",
+			title: "Deep Learning & AI",
+			blurb: "Model training, LLM tooling",
+			items: [
+				{ name: "PyTorch", proficiency: "proficient" },
+				{ name: "NumPy", proficiency: "proficient" },
+				{ name: "Weights & Biases", proficiency: "proficient" },
+				{ name: "OpenCV", proficiency: "familiar" },
+				{ name: "Whisper", proficiency: "familiar" },
+				{ name: "Hugging Face", proficiency: "familiar" },
+				{ name: "CUDA", proficiency: "familiar" },
+			],
+		},
+	],
+};
+
 export default CONFIG;

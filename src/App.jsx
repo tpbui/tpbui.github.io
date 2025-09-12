@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Skills from "./sections/Skills";
 import Hero from "./sections/Hero";
 import Projects from "./sections/Projects";
 import Experience from "./sections/Experience";
@@ -13,6 +14,7 @@ function Home() {
 			<Hero />
 			<Projects />
 			<Experience />
+			<Skills />
 			<Contact />
 		</>
 	);
