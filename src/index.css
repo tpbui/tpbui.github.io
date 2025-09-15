@@ -35,6 +35,9 @@
 
 /* Light palette */
 :root {
+	/* font */
+	--font-sans: 'IBM Plex Sans', system-ui, sans-serif;
+
 	/* neutrals */
 	--bg: 0 0% 100%;
 	--fg: 230 20% 18%;
