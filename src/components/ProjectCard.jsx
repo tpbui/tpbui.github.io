@@ -1,22 +1,33 @@
-import { Calendar, ChevronRight, FileText } from "lucide-react";
+import {
+	Calendar,
+	ChevronRight,
+	FileText,
+	Link as LinkIcon,
+} from "lucide-react";
 import { formatDate } from "../utils/date";
 import Card from "./ui/Card";
 import ButtonLink from "./ui/ButtonLink";
 
 export default function ProjectCard({ project, onOpen }) {
+	const primaryLinks = project.links ?? [];
+	const hasBlog = Boolean(project.slug);
+	const hasImage = Boolean(project.image);
+	const hasAnyButtons = primaryLinks.length > 0 || hasBlog;
+
 	return (
 		<Card className="card overflow-hidden group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
 			<button
 				onClick={() => onOpen(project)}
-				className="text-left w-full bg-transparent p-0 appearance-none rounded-xl focus:outline-none focus-visible:ring-2 ring-ring ring-offset-2 ring-offset-background"
+				className="text-left w-full bg-transparent p-0 appearance-none rounded-xl focus:outline-none focus-visible:ring-2 ring-ring ring-offset-2 ring-offset-background cursor-pointer"
 			>
-				{project.image ? (
+				{hasImage && (
 					<img
 						src={project.image}
 						alt={project.title}
 						className="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-[1.02]"
 					/>
-				) : null}
+				)}
+
 				<div className="p-5">
 					<div className="flex items-center justify-between">
 						<h3 className="font-semibold text-foreground flex items-center gap-2 transition-colors group-hover:text-primary">
@@ -33,36 +44,34 @@ export default function ProjectCard({ project, onOpen }) {
 					<p className="mt-2 text-sm text-muted-foreground italic">
 						{project.summary}
 					</p>
-
-					{project.links?.length ? (
-						<div className="mt-4 flex flex-wrap gap-3">
-							{project.links.map((l) => (
-								<ButtonLink
-									key={l.href}
-									href={l.href}
-									icon={l.icon || LinkIcon}
-									className="btn btn-primary"
-								>
-									{l.label}
-								</ButtonLink>
-							))}
-						</div>
-					) : null}
-
-					{project.slug ? (
-						<div className="mt-4 flex flex-wrap gap-3">
-							<ButtonLink
-								href={`/project/${project.slug}`}
-								internal
-								icon={FileText}
-								className="btn btn-primary"
-							>
-								Blog
-							</ButtonLink>
-						</div>
-					) : null}
 				</div>
 			</button>
+
+			{hasAnyButtons && (
+				<div className="p-5 pt-0 flex flex-wrap gap-3">
+					{primaryLinks.map((l) => (
+						<ButtonLink
+							key={l.href}
+							href={l.href}
+							icon={l.icon || LinkIcon}
+							className="btn btn-primary"
+						>
+							{l.label}
+						</ButtonLink>
+					))}
+
+					{hasBlog && (
+						<ButtonLink
+							href={`/project/${project.slug}`}
+							internal
+							icon={FileText}
+							className="btn btn-primary"
+						>
+							Blog
+						</ButtonLink>
+					)}
+				</div>
+			)}
 		</Card>
 	);
 }
