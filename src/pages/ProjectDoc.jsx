@@ -2,6 +2,9 @@ import { useMemo, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import rehypeAttr from "rehype-attr";
+import rehypeRaw from "rehype-raw";
+import rehypeSanitize, { defaultSchema } from "rehype-sanitize";
 import Card from "../components/ui/Card";
 import Pill from "../components/ui/Pill";
 import TableOfContent from "../components/TableOfContent";
@@ -76,6 +79,20 @@ export default function ProjectDoc() {
 			);
 		};
 
+	const SANITIZE_SCHEMA = {
+		...defaultSchema,
+		attributes: {
+			...defaultSchema.attributes,
+			img: [
+				...(defaultSchema.attributes?.img || []),
+				["img", "width"],
+				["img", "height"],
+				["img", "style"],
+				["img", "className"],
+			],
+		},
+	};
+
 	return (
 		<section className="max-w-3xl mx-auto px-4 py-10">
 			{/* Post header */}
@@ -98,6 +115,7 @@ export default function ProjectDoc() {
 			<article className="prose max-w-none text-foreground">
 				<ReactMarkdown
 					remarkPlugins={[remarkGfm]}
+					rehypePlugins={[[rehypeRaw, rehypeAttr, { properties: "attr" }], [rehypeSanitize, SANITIZE_SCHEMA]]}
 					components={{
 						h1: heading("h1"),
 						h2: heading("h2"),
@@ -106,7 +124,9 @@ export default function ProjectDoc() {
 							<figure className="my-6">
 								<img
 									{...props}
-									className="rounded-xl border border-border mx-auto"
+									className={`border border-border mx-auto ${
+										props.className ?? ""
+									}`}
 								/>
 								{props.alt ? (
 									<figcaption className="text-xs text-muted-foreground mt-2 text-center">
