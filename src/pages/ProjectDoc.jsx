@@ -115,11 +115,41 @@ export default function ProjectDoc() {
 			<article className="prose max-w-none text-foreground">
 				<ReactMarkdown
 					remarkPlugins={[remarkGfm]}
-					rehypePlugins={[[rehypeRaw, rehypeAttr, { properties: "attr" }], [rehypeSanitize, SANITIZE_SCHEMA]]}
+					rehypePlugins={[
+						[rehypeRaw, rehypeAttr, { properties: "attr" }],
+						[rehypeSanitize, SANITIZE_SCHEMA],
+					]}
 					components={{
 						h1: heading("h1"),
 						h2: heading("h2"),
 						h3: heading("h3"),
+
+						p: ({ node, ...props }) => (
+							<p className="my-4 leading-7" {...props} />
+						),
+						ul: ({ node, ...props }) => (
+							<ul
+								className="my-4 list-disc list-outside pl-6 space-y-1.5"
+								{...props}
+							/>
+						),
+						ol: ({ node, ...props }) => (
+							<ol
+								className="my-4 list-decimal list-outside pl-6 space-y-1.5"
+								{...props}
+							/>
+						),
+						li: ({ node, ...props }) => <li className="leading-7" {...props} />,
+
+						blockquote: ({ node, ...props }) => (
+							<blockquote
+								className="my-6 border-l-4 pl-4 italic text-muted-foreground"
+								{...props}
+							/>
+						),
+
+						hr: () => <hr className="my-8 border-border" />,
+
 						img: (props) => (
 							<figure className="my-6">
 								<img
@@ -135,17 +165,19 @@ export default function ProjectDoc() {
 								) : null}
 							</figure>
 						),
+
 						a: (props) => (
 							<a
 								{...props}
 								className="text-primary underline hover:no-underline"
 							/>
 						),
+
 						code: ({ inline, className, children, ...rest }) => {
 							if (inline)
 								return <code className="px-1 py-0.5 rounded">{children}</code>;
 							return (
-								<pre className="rounded-xl border border-border p-4 overflow-auto">
+								<pre className="my-6 border border-border p-4 overflow-auto">
 									<code className={className} {...rest}>
 										{children}
 									</code>
