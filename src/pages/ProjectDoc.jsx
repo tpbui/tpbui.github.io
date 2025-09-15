@@ -67,7 +67,7 @@ export default function ProjectDoc() {
 			const id = slugify(String(plain));
 			const cls =
 				Tag === "h1"
-					? "text-3xl font-semibold tracking-tight text-foreground"
+					? "text-3xl font-semibold tracking-tight text-primary"
 					: Tag === "h2"
 					? "text-2xl font-semibold text-foreground mt-8"
 					: "text-xl font-semibold text-foreground mt-6";
