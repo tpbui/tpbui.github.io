@@ -41,6 +41,15 @@ First of all, I need to understand how an HTTP request and HTTP response looks l
 - Add a TLS/HTTPS endpoint
 - Support /cgi/ dynamic content
 
+# Demo
+**1. Baseline**
+
+https://youtu.be/Irfo5y1BSiA
+
+**2. MVP**
+
+**3. Final Result**
+
 # Key Design Choice
 
 ## The Core Logic

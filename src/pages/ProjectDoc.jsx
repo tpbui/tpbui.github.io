@@ -69,8 +69,8 @@ export default function ProjectDoc() {
 				Tag === "h1"
 					? "text-3xl font-semibold tracking-tight text-primary"
 					: Tag === "h2"
-					? "text-2xl font-semibold text-foreground mt-8"
-					: "text-xl font-semibold text-foreground mt-6";
+					? "text-2xl font-semibold text-foreground mt-4"
+					: "text-xl font-semibold text-foreground mt-2";
 
 			return (
 				<Tag id={id} className={`${cls} scroll-mt-24`}>
@@ -129,13 +129,13 @@ export default function ProjectDoc() {
 						),
 						ul: ({ node, ...props }) => (
 							<ul
-								className="my-4 list-disc list-outside pl-6 space-y-1.5"
+								className="my-4 list-disc list-outside pl-6 space-y-1.5 mb-4"
 								{...props}
 							/>
 						),
 						ol: ({ node, ...props }) => (
 							<ol
-								className="my-4 list-decimal list-outside pl-6 space-y-1.5"
+								className="my-4 list-decimal list-outside pl-6 space-y-1.5 mb-4"
 								{...props}
 							/>
 						),
@@ -143,15 +143,15 @@ export default function ProjectDoc() {
 
 						blockquote: ({ node, ...props }) => (
 							<blockquote
-								className="my-6 border-l-4 pl-4 italic text-muted-foreground"
+								className="my-4 border-l-4 pl-4 italic text-muted-foreground"
 								{...props}
 							/>
 						),
 
-						hr: () => <hr className="my-8 border-border" />,
+						hr: () => <hr className="my-4 border-border" />,
 
 						img: (props) => (
-							<figure className="my-6">
+							<figure className="my-4">
 								<img
 									{...props}
 									className={`border border-border mx-auto ${
@@ -159,25 +159,40 @@ export default function ProjectDoc() {
 									}`}
 								/>
 								{props.alt ? (
-									<figcaption className="text-xs text-muted-foreground mt-2 text-center">
+									<figcaption className="text-xs text-muted-foreground mt-4 text-center">
 										{props.alt}
 									</figcaption>
 								) : null}
 							</figure>
 						),
 
-						a: (props) => (
-							<a
-								{...props}
-								className="text-primary underline hover:no-underline"
-							/>
-						),
+						a: (props) => {
+							if (props.href && props.href.includes("https://youtu.be")) {
+								const u = new URL(props.href);
+								const videoId = u.pathname.slice(1);
+								return (
+									<iframe
+										width="560"
+										height="315"
+										src={`https://www.youtube.com/embed/${videoId}`}
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+										allowFullScreen
+									></iframe>
+								);
+							}
+							return (
+								<a
+									{...props}
+									className="text-primary underline hover:no-underline"
+								/>
+							);
+						},
 
 						code: ({ inline, className, children, ...rest }) => {
 							if (inline)
 								return <code className="px-1 py-0.5 rounded">{children}</code>;
 							return (
-								<pre className="my-6 border border-border p-4 overflow-auto">
+								<pre className="my-4 border border-border p-4 overflow-auto rounded-xl">
 									<code className={className} {...rest}>
 										{children}
 									</code>
