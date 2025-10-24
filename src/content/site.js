@@ -15,6 +15,14 @@ const CONFIG = {
 	resumeUrl:
 		"https://drive.google.com/file/d/1QBqLus7yFWJu-NmG4EaTaNBBNSwDbTgy/view?usp=drive_link",
 	githubUrl: "https://github.com/tpbui",
+	hero: {
+		typing: [
+			"Hello World! ;D",
+			"Welcome to my portfolio!",
+			"Tra Bui"
+		],
+		tagline: "Computer Scientist | Software Engineer",
+	},
 	links: [
 		{
 			label: "GitHub",
