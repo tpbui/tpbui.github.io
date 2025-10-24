@@ -88,13 +88,9 @@ export default function Hero() {
 	return (
 		<section
 			id="home"
-			className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center overflow-hidden px-6 py-20 sm:px-12"
+			className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center px-6 py-20 sm:px-12"
 		>
-			<div className="hero-splash" aria-hidden="true" />
-			<div className="hero-blob hero-blob-1" aria-hidden="true" />
-			<div className="hero-blob hero-blob-2" aria-hidden="true" />
-
-			<div className="relative z-10 mx-auto flex max-w-3xl flex-col items-center gap-8 text-center">
+			<div className="mx-auto flex max-w-3xl flex-col items-center gap-8 text-center">
 				<h1 className="hero-heading text-balance text-6xl font-black tracking-tight text-foreground sm:text-7xl md:text-8xl">
 					<span className="typewriter">{typedText}</span>
 				</h1>
@@ -115,7 +111,7 @@ export default function Hero() {
 								<a
 									key={href}
 									href={href}
-									className="group flex h-12 w-12 items-center justify-center rounded-full border border-border bg-background/90 shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:bg-primary/10 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+									className="group flex h-12 w-12 items-center justify-center rounded-full border border-border bg-background/90 shadow-sm transition hover:-translate-y-0.5 hover:bg-primary/10 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
 									aria-label={label}
 									title={label}
 									target={/^https?:/i.test(href) ? "_blank" : undefined}
