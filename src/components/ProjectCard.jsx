@@ -1,18 +1,9 @@
-import {
-	Calendar,
-	ChevronRight,
-	FileText,
-	Link as LinkIcon,
-} from "lucide-react";
+import { Calendar, ChevronRight } from "lucide-react";
 import { formatDate } from "../utils/date";
 import Card from "./ui/Card";
-import ButtonLink from "./ui/ButtonLink";
 
 export default function ProjectCard({ project, onOpen }) {
-	const primaryLinks = project.links ?? [];
-	const hasBlog = Boolean(project.slug);
 	const hasImage = Boolean(project.image);
-	const hasAnyButtons = primaryLinks.length > 0 || hasBlog;
 
 	return (
 		<Card className="card overflow-hidden group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
@@ -46,32 +37,6 @@ export default function ProjectCard({ project, onOpen }) {
 					</p>
 				</div>
 			</button>
-
-			{hasAnyButtons && (
-				<div className="p-5 pt-0 flex flex-wrap gap-3">
-					{primaryLinks.map((l) => (
-						<ButtonLink
-							key={l.href}
-							href={l.href}
-							icon={l.icon || LinkIcon}
-							className="btn btn-primary"
-						>
-							{l.label}
-						</ButtonLink>
-					))}
-
-					{hasBlog && (
-						<ButtonLink
-							href={`/project/${project.slug}`}
-							internal
-							icon={FileText}
-							className="btn btn-primary"
-						>
-							Blog
-						</ButtonLink>
-					)}
-				</div>
-			)}
 		</Card>
 	);
 }
