@@ -1,13 +1,8 @@
-import SectionReveal from "../motion/SectionReveal";
-
 export default function Section({
 	id,
 	title,
 	children,
-	reveal = false,
-	twoWay = true,
-	stagger = 80,
-	variant = "up",
+	className = "",
 }) {
 	const Inner = (
 		<>
@@ -19,14 +14,12 @@ export default function Section({
 	);
 	return (
 		<section id={id} className="scroll-mt-24">
-			<div className="max-w-5xl mx-auto px-4 py-10">
-				{reveal ? (
-					<SectionReveal twoWay={twoWay} stagger={stagger} variant={variant}>
-						{Inner}
-					</SectionReveal>
-				) : (
-					Inner
-				)}
+			<div
+				className={`max-w-5xl mx-auto px-4 py-10${
+					className ? ` ${className}` : ""
+				}`}
+			>
+				{Inner}
 			</div>
 		</section>
 	);

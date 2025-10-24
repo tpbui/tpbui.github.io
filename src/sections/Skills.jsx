@@ -82,7 +82,7 @@ export default function Skills() {
 	const { legend, groups } = skillsContent;
 
 	return (
-		<Section id="skills" title="Skills" reveal twoWay stagger variant>
+		<Section id="skills" title="Skills">
 			<SectionHeader legend={legend}></SectionHeader>
 			<div className="grid grid-cols-1 sm:grid-cols-1 xl:grid-cols-2 gap-5 md:gap-6">
 				{groups.map(({ key, title, blurb, columns, items }) => (

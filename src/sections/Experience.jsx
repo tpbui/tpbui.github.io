@@ -6,7 +6,7 @@ import CONFIG from "../content/site";
 
 export default function Experience() {
 	return (
-		<Section id="experience" title="Experience" reveal twoWay stagger variant>
+		<Section id="experience" title="Experience">
 			<Card className="p-5">
 				<div className="flex items-center gap-2 text-foreground mb-3">
 					<Briefcase size={18} className="text-primary" />
@@ -16,8 +16,7 @@ export default function Experience() {
 					{CONFIG.internships.map((w, idx) => (
 						<li
 							key={idx}
-							className="border-l-2 border-border pl-3 will-change-[transform,opacity] animate-in fade-in slide-in-from-bottom-2 duration-400"
-							style={{ animationDelay: `${idx * 60}ms` }}
+							className="border-l-2 border-border pl-3"
 						>
 							<div className="flex items-center justify-between">
 								<span className="font-medium text-foreground">
@@ -46,8 +45,7 @@ export default function Experience() {
 					{CONFIG.academic.map((w, idx) => (
 						<li
 							key={idx}
-							className="border-l-2 border-border pl-3 will-change-[transform,opacity] animate-in fade-in slide-in-from-bottom-2 duration-400"
-							style={{ animationDelay: `${idx * 60}ms` }}
+							className="border-l-2 border-border pl-3"
 						>
 							<div className="flex items-center justify-between">
 								<span className="font-medium text-foreground">

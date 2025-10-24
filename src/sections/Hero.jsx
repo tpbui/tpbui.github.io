@@ -8,7 +8,7 @@ import CONFIG from "../content/site";
 
 export default function Hero() {
 	return (
-		<Section id="home" className="max-w-5xl mx-auto px-4 py-24" reveal twoWay stagger variant>
+		<Section id="home" className="max-w-5xl mx-auto px-4 py-24">
 			<div className="grid sm:grid-cols-5 gap-8 items-center">
 				<div className="sm:col-span-3">
 					<h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
