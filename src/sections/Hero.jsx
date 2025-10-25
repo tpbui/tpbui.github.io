@@ -17,7 +17,7 @@ export default function Hero() {
 		return ["Hello World!", `Hi, I'm ${CONFIG.name} :D`];
 	}, []);
 
-	const tagline = CONFIG.hero?.tagline ?? "Software Engineer | Computer Scientist | Lifelong learner";
+	const tagline = CONFIG.hero?.tagline ?? "Computer Scientist | Software Engineer";
 
 	const socialLinks = (CONFIG.links ?? [])
 		.filter((link) => link && link.href && link.icon)
