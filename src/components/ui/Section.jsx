@@ -4,9 +4,14 @@ export default function Section({
 	children,
 	className = "",
 }) {
+	const headingId = id ? `${id}-heading` : undefined;
+
 	const Inner = (
 		<>
-			<h2 className="text-2xl sm:text-3xl font-semibold tracking-tight mb-6 text-foreground">
+			<h2
+				id={headingId}
+				className="text-2xl sm:text-3xl font-semibold tracking-tight mb-6 text-foreground"
+			>
 				{title}
 			</h2>
 			<div className="space-y-6">{children}</div>

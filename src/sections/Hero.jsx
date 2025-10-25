@@ -88,9 +88,9 @@ export default function Hero() {
 	return (
 		<section
 			id="home"
-			className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center px-6 py-20 sm:px-12"
+			className="relative flex min-h-[calc(100vh-4rem)] flex-col items-center px-6 pb-32 pt-20 sm:px-12 sm:pb-36"
 		>
-			<div className="mx-auto flex max-w-3xl flex-col items-center gap-8 text-center">
+			<div className="mx-auto flex flex-1 flex-col items-center justify-center gap-8 text-center">
 				<h1 className="hero-heading text-balance text-6xl font-black tracking-tight text-foreground sm:text-7xl md:text-8xl">
 					<span className="typewriter">{typedText}</span>
 				</h1>
@@ -124,6 +124,16 @@ export default function Hero() {
 					</div>
 				) : null}
 			</div>
+
+			<a
+				href="#projects-heading"
+				className="group absolute bottom-12 left-1/2 flex h-12 w-12 -translate-x-1/2 items-center justify-center rounded-full border border-border bg-background/90 text-foreground shadow-sm transition hover:-translate-y-1 hover:bg-primary/10 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:bottom-16"
+				aria-label="Scroll to projects"
+			>
+				<span className="inline-block text-lg leading-none transition group-hover:translate-y-0.5">
+					↓
+				</span>
+			</a>
 		</section>
 	);
 }
