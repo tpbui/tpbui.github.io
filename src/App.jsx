@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Skills from "./sections/Skills";
 import Hero from "./sections/Hero";
+import About from "./sections/About";
 import Projects from "./sections/Projects";
 import Experience from "./sections/Experience";
 import Contact from "./sections/Contact";
@@ -12,6 +13,7 @@ function Home() {
 	return (
 		<>
 			<Hero />
+			<About />
 			<Projects />
 			<Experience />
 			<Skills />
@@ -22,7 +24,7 @@ function Home() {
 
 export default function App() {
 	return (
-		<div className="min-h-screen overflow-x-hidden bg-background text-foreground">
+		<div className="min-h-screen overflow-x-hidden bg-background text-foreground pt-16">
 			<Navbar />
 			<Routes>
 				<Route path="/" element={<Home />} />

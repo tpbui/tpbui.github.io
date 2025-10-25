@@ -18,6 +18,12 @@ export default function Hero() {
 	}, []);
 
 	const tagline = CONFIG.hero?.tagline ?? "Computer Scientist | Software Engineer";
+	const sectionLinks = useMemo(() => {
+		const configuredSections =CONFIG.sections;
+		return configuredSections.filter(
+			(section) => section?.id && section?.label
+		);
+	}, []);
 
 	const socialLinks = (CONFIG.links ?? [])
 		.filter((link) => link && link.href && link.icon)
@@ -84,6 +90,8 @@ export default function Hero() {
 
 	const typedText = typingPhrases[phraseIndex]?.slice(0, subIndex) ?? "";
 	const typedTagline = tagline.slice(0, taglineIndex);
+	const firstSectionId = sectionLinks[0]?.id ?? "about";
+	const firstSectionLabel = sectionLinks[0]?.label ?? "About";
 
 	return (
 		<section
@@ -102,7 +110,7 @@ export default function Hero() {
 				) : null}
 
 				{socialLinks.length > 0 ? (
-					<div className="flex flex-col items-center gap-3">
+					<div className="flex flex-col items-center gap-3 mt-6 sm:mt-8">
 						<span className="hero-social-label text-xs font-semibold uppercase text-muted-foreground/80">
 							Find me on
 						</span>
@@ -126,9 +134,9 @@ export default function Hero() {
 			</div>
 
 			<a
-				href="#projects-heading"
+				href={`#${firstSectionId}`}
 				className="group absolute bottom-12 left-1/2 flex h-12 w-12 -translate-x-1/2 items-center justify-center rounded-full border border-border bg-background/90 text-foreground shadow-sm transition hover:-translate-y-1 hover:bg-primary/10 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:bottom-16"
-				aria-label="Scroll to projects"
+				aria-label={`Scroll to ${firstSectionLabel}`}
 			>
 				<span className="inline-block text-lg leading-none transition group-hover:translate-y-0.5">
 					↓

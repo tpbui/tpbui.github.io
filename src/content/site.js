@@ -23,6 +23,27 @@ const CONFIG = {
 		],
 		tagline: "Computer Scientist | Software Engineer",
 	},
+	about: {
+		photo: "/profile.jpeg",
+		paragraphs: [
+			"I'm an aspiring software engineer who loves building reliable systems that tackle high-stakes, real-world problems and leave a lasting impact on people's lives. I value thoughtful design, production-ready code, and the execution of a whiteboard idea through to a shipped product.",
+			"When I'm not heads-down on a project, you'll find me attending tech start-up events/talks or doing civic engagement work that helps local community.",
+			"Currently, I'm seeking Software Engineer positions for new grads. If you think I'm a good fit, please reach out via trabui.0517@gmail.com."
+		],
+	},
+	education: {
+		school: "Carnegie Mellon University",
+		graduation: "May 2025",
+		major: "B.Sc. in Computer Science (University Honors)",
+		minor: "Minor in Business Adminstrations",
+	},
+	sections: [
+		{ id: "about", label: "About" },
+		{ id: "projects", label: "Projects" },
+		{ id: "experience", label: "Experience" },
+		{ id: "skills", label: "Skills" },
+		{ id: "contact", label: "Contact" },
+	],
 	links: [
 		{
 			label: "GitHub",
